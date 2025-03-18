@@ -55,7 +55,7 @@ const HeroSection = () => {
     };
 
     return (
-        <div className="bg-background pt-20" id="home">
+        <div className="bg-background md:pt-20 pt-10" id="home">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 jus items-center min-h-screen">
                     <div className="text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
