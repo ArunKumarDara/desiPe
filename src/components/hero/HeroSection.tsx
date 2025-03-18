@@ -207,7 +207,7 @@ const HeroSection = () => {
                                     <div className="text-xs sm:text-sm text-muted-foreground">Per Transaction</div>
                                 </div>
                                 <div className="space-y-1">
-                                    <div className="text-xl sm:text-2xl font-bold text-primary">1000+</div>
+                                    <div className="text-xl sm:text-2xl font-bold text-primary">₹1000+</div>
                                     <div className="text-xs sm:text-sm text-muted-foreground">Savings in a year</div>
                                 </div>
                             </div>
