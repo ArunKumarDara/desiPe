@@ -11,6 +11,7 @@ import {
     DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 
 const HeroSection = () => {
@@ -75,11 +76,22 @@ const HeroSection = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Button size="lg" className="gap-2">
-                                <TrendingUp className="w-4 h-4" />
-                                Start Investing
-                            </Button>
-
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <Button size="lg" className="gap-2">
+                                        <TrendingUp className="w-4 h-4" />
+                                        Start Investing
+                                    </Button>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-md text-center">
+                                    <DialogHeader>
+                                        <DialogTitle>Coming Soon! 🚀</DialogTitle>
+                                    </DialogHeader>
+                                    <p className="text-muted-foreground">
+                                        We are working hard to build an amazing investment experience for you. Stay tuned!
+                                    </p>
+                                </DialogContent>
+                            </Dialog>
                             <Drawer>
                                 <DrawerTrigger asChild>
                                     <Button size="lg" variant="outline" className="gap-2">
