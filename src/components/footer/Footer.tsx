@@ -19,7 +19,7 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="space-y-3">
                         <h3 className="text-xl font-bold text-white">
-                            Desipe
+                            Desipe FInance Private Ltd.
                         </h3>
                         <p className="text-gray-300 text-sm">
                             Transform your spare change into meaningful investments with every transaction.
@@ -103,7 +103,7 @@ const Footer = () => {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
                         <p className="text-xs text-gray-400 text-center sm:text-left">
-                            © {new Date().getFullYear()} Desipe. All rights reserved.
+                            © {new Date().getFullYear()} Desipe Finance pvt.ltd. All rights reserved.
                         </p>
                         <div className="flex gap-4 text-xs text-gray-400">
                             <a href="#" className="hover:text-white transition-colors">Privacy</a>
