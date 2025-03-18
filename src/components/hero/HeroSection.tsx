@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-// import Image from "next/image";
 
 const HeroSection = () => {
     const [monthlyTransactions, setMonthlyTransactions] = useState<string>("");
@@ -24,23 +23,18 @@ const HeroSection = () => {
     } | null>(null);
 
     const calculateReturns = (transactions: number) => {
-        // Per transaction investment range
-        const minInvestment = 2;  // ₹2 minimum
-        const maxInvestment = 5;  // ₹5 maximum
 
-        // Average investment per transaction
+        const minInvestment = 2;
+        const maxInvestment = 5;
+
         const avgPerTransaction = (minInvestment + maxInvestment) / 2; // ₹3.5
 
-        // Monthly investment calculation
         const monthlyInvestment = transactions * avgPerTransaction;
 
-        // Annual investment
         const annualInvestment = monthlyInvestment * 12;
 
-        // Returns at 15% per annum
         const annualReturns = annualInvestment * 0.15;
 
-        // Total value after one year (investment + returns)
         const totalValue = annualInvestment + annualReturns;
 
         return {
