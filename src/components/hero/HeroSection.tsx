@@ -57,7 +57,7 @@ const HeroSection = () => {
     return (
         <div className="bg-background pt-20">
             <div className="container mx-auto px-4 sm:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 justify-center items-center min-h-screen">
                     <div className="text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-2">
                             <Sparkles className="text-primary w-5 h-5" />
@@ -78,7 +78,7 @@ const HeroSection = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Dialog>
                                 <DialogTrigger asChild>
-                                    <Button size="lg" className="gap-2">
+                                    <Button size="lg" className="gap-2 cursor-pointer">
                                         <TrendingUp className="w-4 h-4" />
                                         Start Investing
                                     </Button>
@@ -94,7 +94,7 @@ const HeroSection = () => {
                             </Dialog>
                             <Drawer>
                                 <DrawerTrigger asChild>
-                                    <Button size="lg" variant="outline" className="gap-2">
+                                    <Button size="lg" variant="outline" className="gap-2 cursor-pointer">
                                         <Coins className="w-4 h-4" />
                                         Calculate Returns
                                     </Button>
@@ -214,9 +214,9 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-                    <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] mt-8 lg:mt-0">
+                    <div className="relative md:block hidden h-[400px] sm:h-[500px] lg:h-[600px] mt-8 lg:mt-0">
                         <img
-                            src="/vite.svg"
+                            src="/invest.jpg"
                             alt="Desipe App Interface"
                             className="object-contain"
                         />
