@@ -5,17 +5,18 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-// import Link from "next/link";
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState("home");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: "Home", href: "#home" },
-        { name: "Features", href: "#features" },
-        { name: "How it works", href: "#how-it-works" },
-        { name: "Investments", href: "#investments" },
+        { name: "Home", to: "home" },
+        { name: "Investments", to: "investments" },
+        // { name: "Features", to: "features" },
+        { name: "How it works", to: "how-it-works" },
+        { name: "Contact Us", to: "footer" }
+        // { name: "Investments", to: "investments" },
     ];
 
     const handleMobileMenuToggle = () => {
@@ -33,26 +34,26 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link
-                        href="/"
+                        to="home" smooth={true} duration={500}
                         className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent"
                     >
-                        Desipe
+                        <img src="/desipelogo.png" className="w-40 h-17" />
                     </Link>
-
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <Link
-                                key={link.href}
-                                href={link.href}
+                                key={link.to}
+                                to={link.to}
+                                smooth={true} duration={500}
                                 className={cn(
-                                    "relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary",
-                                    activeLink === link.href ? "text-primary" : "text-muted-foreground"
+                                    "relative px-2 py-1 text-sm font-medium transition-colors hover:text-primary cursor-pointer",
+                                    activeLink === link.to ? "text-primary" : "text-muted-foreground"
                                 )}
-                                onClick={() => handleLinkClick(link.href)}
+                                onClick={() => handleLinkClick(link.to)}
                             >
                                 {link.name}
-                                {activeLink === link.href && (
+                                {activeLink === link.to && (
                                     <motion.div
                                         layoutId="underline"
                                         className="absolute left-0 right-0 bottom-0 h-[2px] bg-primary"
