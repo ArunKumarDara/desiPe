@@ -105,6 +105,7 @@ const Navbar = () => {
                                     <Link
                                         key={link.to}
                                         to={link.to}
+                                        smooth={true} duration={500}
                                         className={cn(
                                             "py-3 text-base font-medium border-b border-gray-100 transition-colors hover:text-primary",
                                             activeLink === link.to ? "text-primary" : "text-foreground"
