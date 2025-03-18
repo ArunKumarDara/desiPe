@@ -55,9 +55,9 @@ const HeroSection = () => {
     };
 
     return (
-        <div className="bg-background pt-20">
+        <div className="bg-background pt-20" id="home">
             <div className="container mx-auto px-4 sm:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 justify-center items-center min-h-screen">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 jus items-center min-h-screen">
                     <div className="text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
                         <div className="flex items-center justify-center lg:justify-start gap-2">
                             <Sparkles className="text-primary w-5 h-5" />
@@ -66,7 +66,7 @@ const HeroSection = () => {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                        <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold leading-tight">
                             Turn Every Payment into an Investment Opportunity
                         </h1>
 
@@ -207,8 +207,8 @@ const HeroSection = () => {
                                     <div className="text-xs sm:text-sm text-muted-foreground">Per Transaction</div>
                                 </div>
                                 <div className="space-y-1">
-                                    <div className="text-xl sm:text-2xl font-bold text-primary">100K+</div>
-                                    <div className="text-xs sm:text-sm text-muted-foreground">Active Users</div>
+                                    <div className="text-xl sm:text-2xl font-bold text-primary">1000+</div>
+                                    <div className="text-xs sm:text-sm text-muted-foreground">Savings in a year</div>
                                 </div>
                             </div>
                         </div>
