@@ -66,11 +66,19 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-gray-300 text-sm">
                                 <MapPin size={16} className="shrink-0 mt-1" />
-                                <span>jfkjsbmnvmnjksfkjsskf, 400001</span>
+                                <div className="flex flex-col justify-start">
+                                    <h3 className="font-bold text-white">
+                                        Desipe Finance Private Ltd.
+                                    </h3>
+                                    <span>Unit no:203, 2nd floor suite no:104,</span>
+                                    <span>SBR CV Towers, Sector-I, sy No-64,</span>
+                                    <span>HUDA Techno Enclave,</span>
+                                    <span>Madhapur, Hyderabad - 500081</span>
+                                </div>
                             </li>
                             <li className="flex items-center gap-2 text-gray-300 text-sm">
                                 <Phone size={16} />
-                                <span>+91 123-456-7890</span>
+                                <span>040 - 23420056</span>
                             </li>
                             <li className="flex items-center gap-2 text-gray-300 text-sm">
                                 <Mail size={16} />
