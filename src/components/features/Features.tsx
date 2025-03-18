@@ -43,7 +43,7 @@ const Features = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20">
+        <section className="py-16 sm:py-20" id="investments">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4">
@@ -75,7 +75,7 @@ const Features = () => {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center bg-secondary/20 rounded-lg p-6 sm:p-8">
+                <div className="mt-8 text-center bg-secondary/20 rounded-lg p-6 sm:p-8">
                     <h3 className="text-xl sm:text-2xl font-bold mb-6">
                         How Your Money Grows
                     </h3>
