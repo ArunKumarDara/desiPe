@@ -58,10 +58,13 @@ const Features = () => {
                     {features.map((feature, index) => (
                         <Card key={index} className="border-2 hover:border-primary transition-colors">
                             <CardHeader>
-                                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                                    <feature.icon className="w-6 h-6 text-primary" />
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <feature.icon className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <CardTitle className="text-lg sm:text-xl text-center">{feature.title}</CardTitle>
                                 </div>
-                                <CardTitle className="text-lg sm:text-xl">{feature.title}</CardTitle>
+
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm sm:text-base text-muted-foreground">
