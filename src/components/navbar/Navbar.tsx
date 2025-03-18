@@ -1,5 +1,3 @@
-"use client"
-
 import { Link } from "react-scroll";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -13,10 +11,8 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", to: "home" },
         { name: "Investments", to: "investments" },
-        // { name: "Features", to: "features" },
         { name: "How it works", to: "how-it-works" },
         { name: "Contact Us", to: "footer" }
-        // { name: "Investments", to: "investments" },
     ];
 
     const handleMobileMenuToggle = () => {
@@ -32,14 +28,12 @@ const Navbar = () => {
         <div className="fixed w-full bg-background shadow-sm z-50">
             <nav className="relative container mx-auto px-4 sm:px-6">
                 <div className="flex items-center justify-between h-16">
-                    {/* Logo */}
                     <Link
                         to="home" smooth={true} duration={500}
                         className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent"
                     >
                         <img src="/desipelogo.png" className="w-40 h-17" />
                     </Link>
-                    {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <Link
@@ -69,7 +63,6 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    {/* Mobile Menu Button */}
                     <button
                         className="md:hidden p-2 hover:bg-secondary/20 rounded-md"
                         onClick={handleMobileMenuToggle}
@@ -82,18 +75,13 @@ const Navbar = () => {
                         )}
                     </button>
                 </div>
-
-                {/* Mobile Navigation Menu */}
                 {isMobileMenuOpen && (
                     <>
-                        {/* Overlay */}
                         <div
                             className="fixed inset-0 bg-black/40 md:hidden"
                             style={{ zIndex: 40 }}
                             onClick={handleMobileMenuToggle}
                         />
-
-                        {/* Menu */}
                         <div
                             className={cn(
                                 "fixed top-0 right-0 h-full w-[200px] bg-white shadow-lg md:hidden",
@@ -103,7 +91,6 @@ const Navbar = () => {
                             )}
                             style={{ zIndex: 50 }}
                         >
-                            {/* Close button inside mobile menu */}
                             <div className="sticky top-0 flex justify-end p-4 bg-white">
                                 <button
                                     className="p-2 hover:bg-secondary/20 rounded-md"
@@ -116,13 +103,13 @@ const Navbar = () => {
                             <div className="flex flex-col px-4">
                                 {navLinks.map((link) => (
                                     <Link
-                                        key={link.href}
-                                        href={link.href}
+                                        key={link.to}
+                                        to={link.to}
                                         className={cn(
                                             "py-3 text-base font-medium border-b border-gray-100 transition-colors hover:text-primary",
-                                            activeLink === link.href ? "text-primary" : "text-foreground"
+                                            activeLink === link.to ? "text-primary" : "text-foreground"
                                         )}
-                                        onClick={() => handleLinkClick(link.href)}
+                                        onClick={() => handleLinkClick(link.to)}
                                     >
                                         {link.name}
                                     </Link>
