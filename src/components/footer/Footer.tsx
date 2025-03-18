@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-scroll";
 import {
     Twitter,
     Facebook,
@@ -12,14 +13,12 @@ import {
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1e293b] text-white mt-16">
-            {/* Main Footer Content */}
+        <footer className="bg-[#1e293b] text-white mt-16" id="footer">
             <div className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Company Info */}
                     <div className="space-y-3">
                         <h3 className="text-xl font-bold text-white">
-                            Desipe FInance Private Ltd.
+                            Desipe Finance Private Ltd.
                         </h3>
                         <p className="text-gray-300 text-sm">
                             Transform your spare change into meaningful investments with every transaction.
@@ -39,31 +38,35 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* Quick Links */}
                     <div className="space-y-3">
                         <h4 className="text-base font-semibold text-white">Quick Links</h4>
                         <ul className="space-y-1.5 text-sm">
-                            {['About Us', 'How It Works', 'Features', 'Investment Plans', 'FAQs'].map((item) => (
-                                <li key={item}>
-                                    <a
-                                        href="#"
-                                        className="text-gray-300 hover:text-white transition-colors"
+                            {[
+                                { name: "Home", to: "home" },
+                                { name: "About Us", to: "about" },
+                                { name: "Investment", to: "investments" },
+                                { name: "How It Works", to: "how-it-works" },
+                                { name: "FAQs", to: "faqs" }
+                            ].map((item) => (
+                                <li key={item.to}>
+                                    <Link
+                                        to={item.to}
+                                        smooth={true}
+                                        duration={500}
+                                        className="cursor-pointer text-gray-300 hover:text-white transition-colors"
                                     >
-                                        {item}
-                                    </a>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
-
-                    {/* Contact Info */}
                     <div className="space-y-3">
                         <h4 className="text-base font-semibold text-white">Contact Us</h4>
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-gray-300 text-sm">
                                 <MapPin size={16} className="shrink-0 mt-1" />
-                                <span>123 Investment Avenue, Financial District, 400001</span>
+                                <span>jfkjsbmnvmnjksfkjsskf, 400001</span>
                             </li>
                             <li className="flex items-center gap-2 text-gray-300 text-sm">
                                 <Phone size={16} />
@@ -75,8 +78,6 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-
-                    {/* Newsletter */}
                     <div className="space-y-3">
                         <h4 className="text-base font-semibold text-white">Stay Updated</h4>
                         <div className="space-y-2">
@@ -97,8 +98,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Bottom Bar */}
             <div className="border-t border-white/10">
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
