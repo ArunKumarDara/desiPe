@@ -1,11 +1,15 @@
-import { Button } from "@/components/ui/button"
+import Features from "./components/features/Features";
+import Footer from "./components/footer/Footer";
+import HeroSection from "./components/hero/HeroSection";
+import Navbar from "./components/navbar/Navbar";
 
-function App() {
+export default function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
+    <main>
+      <Navbar />
+      <HeroSection />
+      <Features />
+      <Footer />
+    </main>
   )
 }
-
-export default App
