@@ -1,97 +1,165 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
-    Coins,
+    Brain,
+    Settings,
+    Wallet,
+    Target,
+    PieChart,
     TrendingUp,
     Shield,
-    PiggyBank,
-    ChartLine,
-    Wallet
+    Smartphone,
+    ArrowRight,
+    CheckCircle2
 } from "lucide-react";
 
 const Features = () => {
-    const features = [
+    const mainFeatures = [
         {
-            title: "Smart Micro-Investments",
-            description: "Automatically invest ₹2-5 from every transaction into high-performing mutual funds",
-            icon: PiggyBank,
+            icon: Brain,
+            title: "AI-Powered Expense Categorization",
+            description: "Our advanced AI algorithms automatically categorize your expenses, providing smart insights into your spending patterns.",
+            benefits: [
+                "Automatic transaction categorization",
+                "Spending pattern analysis",
+                "Personalized saving recommendations",
+                "Smart budget suggestions"
+            ]
         },
         {
-            title: "Higher Returns",
-            description: "Earn up to 15% returns on your spare change - better than traditional savings",
-            icon: TrendingUp,
+            icon: Settings,
+            title: "Customizable Savings",
+            description: "Set your own saving rules with flexible percentages based on expense categories.",
+            benefits: [
+                "Category-based saving rules",
+                "Adjustable saving percentages",
+                "Priority-based automation",
+                "Real-time rule updates"
+            ]
         },
         {
-            title: "Gold Investment",
-            description: "Diversify your portfolio with automatic gold investments from your transactions",
-            icon: Coins,
-        },
-        {
-            title: "Portfolio Tracking",
-            description: "Real-time tracking of your investments and returns in one place",
-            icon: ChartLine,
-        },
-        {
-            title: "Secure Transactions",
-            description: "Bank-grade security for all your payments and investments",
-            icon: Shield,
-        },
-        {
-            title: "Instant Withdrawals",
-            description: "Access your invested money whenever you need it",
             icon: Wallet,
+            title: "Flexible Investment Options",
+            description: "Choose from multiple investment options and withdraw your savings whenever needed.",
+            benefits: [
+                "Instant withdrawals",
+                "Multiple investment options",
+                "No lock-in period",
+                "Automated portfolio rebalancing"
+            ]
         },
+        {
+            icon: Target,
+            title: "Goal-Based Saving Plans",
+            description: "Set and track your financial goals with smart progress monitoring and adjustments.",
+            benefits: [
+                "Customizable financial goals",
+                "Progress tracking",
+                "Smart milestone alerts",
+                "Goal-based recommendations"
+            ]
+        }
+    ];
+
+    const additionalFeatures = [
+        {
+            icon: PieChart,
+            title: "Smart Analytics",
+            description: "Get detailed insights into your spending and saving patterns"
+        },
+        {
+            icon: TrendingUp,
+            title: "Growth Tracking",
+            description: "Monitor your wealth growth with interactive charts and projections"
+        },
+        {
+            icon: Shield,
+            title: "Secure Transactions",
+            description: "Bank-grade security for all your financial transactions"
+        },
+        {
+            icon: Smartphone,
+            title: "Easy Mobile Access",
+            description: "Manage your savings anytime, anywhere with our mobile app"
+        }
     ];
 
     return (
-        <section className="py-16 sm:py-10 bg-gray-100" id="investments">
-            <div className="container mx-auto px-4 sm:px-6">
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                        Invest While You Pay
-                    </h2>
-                    <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Turn your everyday payments into smart investments. Every small amount adds up to create a significant impact on your wealth.
+        <section className="py-20 bg-secondary/10" id="features">
+            <div className="container mx-auto px-4 max-w-6xl">
+                {/* Header */}
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h1 className="text-4xl font-bold mb-6">
+                        Powered by AI, Driven by Your Goals
+                    </h1>
+                    <p className="text-lg text-muted-foreground">
+                        Experience the future of savings with our AI-powered features that make
+                        wealth creation effortless and intelligent.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {features.map((feature, index) => (
-                        <Card key={index} className="border-2 hover:border-primary transition-colors">
-                            <CardHeader>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                                        <feature.icon className="w-6 h-6 text-primary" />
-                                    </div>
-                                    <CardTitle className="text-lg sm:text-xl text-center">{feature.title}</CardTitle>
+                {/* Main Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    {mainFeatures.map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-background p-8 rounded-lg border hover:border-primary transition-all duration-300"
+                        >
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-primary/10 rounded-lg">
+                                    <feature.icon className="w-6 h-6 text-primary" />
                                 </div>
-
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm sm:text-base text-muted-foreground">
-                                    {feature.description}
-                                </p>
-                            </CardContent>
-                        </Card>
+                                <div className="space-y-4">
+                                    <h3 className="text-xl font-semibold">{feature.title}</h3>
+                                    <p className="text-muted-foreground">{feature.description}</p>
+                                    <ul className="space-y-2">
+                                        {feature.benefits.map((benefit, idx) => (
+                                            <li key={idx} className="flex items-center gap-2 text-sm">
+                                                <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                                                <span className="text-muted-foreground">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
 
-                <div className="mt-8 text-center bg-secondary/20 rounded-lg p-6 sm:p-8">
-                    <h3 className="text-xl sm:text-2xl font-bold mb-6">
-                        How Your Money Grows
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                        <div className="space-y-2">
-                            <div className="text-2xl sm:text-3xl font-bold text-primary">₹5,000</div>
-                            <p className="text-sm sm:text-base text-muted-foreground">Average yearly investment</p>
+                {/* Additional Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    {additionalFeatures.map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-background p-6 rounded-lg border hover:border-primary transition-all duration-300 text-center"
+                        >
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="p-3 bg-primary/10 rounded-lg">
+                                    <feature.icon className="w-6 h-6 text-primary" />
+                                </div>
+                                <h3 className="font-semibold">{feature.title}</h3>
+                                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                            </div>
                         </div>
-                        <div className="space-y-2">
-                            <div className="text-2xl sm:text-3xl font-bold text-primary">15%</div>
-                            <p className="text-sm sm:text-base text-muted-foreground">Average annual returns</p>
-                        </div>
-                        <div className="space-y-2">
-                            <div className="text-2xl sm:text-3xl font-bold text-primary">₹750+</div>
-                            <p className="text-sm sm:text-base text-muted-foreground">Potential yearly earnings</p>
-                        </div>
+                    ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="text-center bg-background p-8 rounded-lg border">
+                    <h2 className="text-2xl font-bold mb-4">
+                        Ready to Experience Smart Savings?
+                    </h2>
+                    <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                        Join thousands of users who are already benefiting from our AI-powered
+                        savings platform. Start your journey to financial freedom today.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Button size="lg" className="gap-2">
+                            Get Started Now
+                            <ArrowRight className="w-4 h-4" />
+                        </Button>
+                        <Button size="lg" variant="outline">
+                            View Demo
+                        </Button>
                     </div>
                 </div>
             </div>
