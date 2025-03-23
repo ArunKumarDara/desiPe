@@ -9,9 +9,15 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: "Home", to: "home" },
-        { name: "Investments", to: "investments" },
-        { name: "How it works", to: "how-it-works" },
+        // { name: "Home", to: "home" },
+        { name: "About", to: "about" },
+        { name: "Benefits", to: "benefits" },
+        { name: "Blog", to: "blog" },
+        { name: "Features", to: "features" },
+        { name: "How it Works", to: "how-it-works" },
+        { name: "Vision", to: "vision" },
+        { name: "Security", to: "security" },
+        { name: "FAQ", to: "faq" },
         { name: "Contact Us", to: "footer" }
     ];
 
