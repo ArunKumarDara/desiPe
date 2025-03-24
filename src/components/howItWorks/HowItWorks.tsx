@@ -86,7 +86,7 @@ const HowItWorks = () => {
     ];
 
     return (
-        <section className="py-20 bg-gray-50" id="how-it-works">
+        <section className="py-20 bg-gray-100" id="how-it-works">
             <div className="container mx-auto px-4 max-w-6xl">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">

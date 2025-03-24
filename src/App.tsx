@@ -11,7 +11,7 @@ const Security = lazy(() => import("./components/security/Security"))
 const About = lazy(() => import("./components/about/About"))
 const Benefits = lazy(() => import("./components/benefits/Benefits"))
 const Blog = lazy(() => import("./components/blog/Blog"))
-const Features = lazy(() => import("./components/features/Features"))
+const Features = lazy(() => import("./components/features/features"))
 const HowItWorks = lazy(() => import("./components/howItWorks/HowItWorks"));
 const Hero = lazy(() => import("./components/hero/Hero"));
 

@@ -240,7 +240,7 @@ Saving opportunities:
     ];
 
     return (
-        <section className="py-20 bg-gray-50" id="blog">
+        <section className="py-20 bg-gray-100" id="blog">
             <div className="container mx-auto px-4 max-w-6xl">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">

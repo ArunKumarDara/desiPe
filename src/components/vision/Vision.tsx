@@ -26,7 +26,7 @@ const Vision = () => {
     ];
 
     return (
-        <section className="py-20 bg-gray-50" id="vision">
+        <section className="py-20 bg-gray-100" id="vision">
             <div className="container mx-auto px-4 max-w-6xl">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
@@ -65,7 +65,7 @@ const Vision = () => {
                         <div className="text-center">
                             <div className="text-3xl font-bold text-primary mb-2">₹100Cr+</div>
                             <div className="text-sm text-muted-foreground">
-                                Projected Investment Volume by 2024
+                                Projected Investment Volume by 2027
                             </div>
                         </div>
                         <div className="text-center">
